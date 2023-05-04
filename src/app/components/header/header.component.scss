@@ -1,0 +1,28 @@
+.spacer {
+  flex: 1;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  color: #000;
+  font-weight: 600;
+}
+
+.header img {
+  margin: 0 16px;
+}
+
+.header .search-bar {
+  margin: 0 16px;
+}
+
+.header .search-bar:hover {
+  opacity: 0.8;
+}
