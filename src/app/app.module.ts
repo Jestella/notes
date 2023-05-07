@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +12,7 @@ import { NotesComponent } from './components/notes/notes.component';
 import { AddNoteComponent } from './components/add-note/add-note.component';
 import { AboutComponent } from './components/about/about.component';
 import { NoteItemComponent } from './components/note-item/note-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { NoteItemComponent } from './components/note-item/note-item.component';
     NotesComponent,
     AddNoteComponent,
     AboutComponent,
-    NoteItemComponent
+    NoteItemComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

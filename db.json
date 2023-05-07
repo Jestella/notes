@@ -1,0 +1,40 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Book",
+      "text": "Yuval Noah Harari - Sapiens",
+      "starred": true
+    },
+    {
+      "id": 2,
+      "title": "Grocery",
+      "text": "tomato, pasta, garlic, onion",
+      "starred": false
+    },
+    {
+      "id": 3,
+      "title": "Starbucks",
+      "text": "1 tall latte, 1 americano",
+      "starred": true
+    },
+    {
+      "id": 4,
+      "title": "Tim holtons",
+      "text": "1 donut",
+      "starred": true
+    },
+    {
+      "id": 5,
+      "title": "fruit",
+      "text": "3 peaches",
+      "starred": true
+    },
+    {
+      "id": 6,
+      "title": "shoppers",
+      "text": "toilet paper",
+      "starred": true
+    }
+  ]
+}

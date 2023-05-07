@@ -1,4 +1,13 @@
-<div class="card-item">
-  <p>note jsldkfjsldkjfsjdk</p>
-  <input type="date" min="2000-01-01" max="3000-12-31" />
+<div class="note">
+  <h3 (starred)="onToggle(note)">
+    {{ note.title
+    }}<fa-icon
+      [icon]="faTrashCan"
+      [ngStyle
+      ]="{'color':'red'}"
+      (click)="(onDelete)"
+    ></fa-icon>
+  </h3>
+
+  <p>{{ note.text }}</p>
 </div>

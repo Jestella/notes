@@ -2,11 +2,16 @@
   fill: #888;
 }
 
-.note-container {
+.form-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 16px;
+}
+
+.add-form {
+  margin-bottom: 40px;
+  background-color: #eee;
 }
 
 .note {
@@ -35,16 +40,16 @@
   width: 168px;
 }
 
-.note-container .note:not(.highlight-note) {
+.form-container .note:not(.highlight-note) {
   cursor: pointer;
 }
 
-.note-container .note:not(.highlight-note):hover {
+.form-container .note:not(.highlight-note):hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 }
 
-.note-container .note:not(.highlight-note):hover .material-icons path {
+.form-container .note:not(.highlight-note):hover .material-icons path {
   fill: rgb(105, 103, 103);
 }
 
