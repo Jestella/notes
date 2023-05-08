@@ -28,4 +28,8 @@ export class NotesComponent {
     note.starred = !note.starred;
     this.noteService.addStar(note).subscribe();
   }
+
+  addNote(note: Note) {
+    this.noteService.addNote(note).subscribe((note) => this.notes.push(note));
+  }
 }

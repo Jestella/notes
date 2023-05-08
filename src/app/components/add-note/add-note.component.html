@@ -1,20 +1,15 @@
-<form class="add-form" (ngSubmit)="(onSubmit)">
-  <div class="form-container">
+<form *ngIf="showAddNote" class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
     <label for="title">Title</label>
     <input type="text" name="title" [(ngModel)]="title" id="title" />
   </div>
-  <div class="form-container">
+  <div class="form-control">
     <label for="text">Text</label>
     <input type="text" name="text" [(ngModel)]="text" id="text" />
   </div>
-  <div class="form-container">
-    <label for="important">important</label>
-    <input
-      type="checkbox"
-      name="important"
-      [(ngModel)]="important"
-      id="important"
-    />
+  <div class="form-control">
+    <label for="starred">starred</label>
+    <input type="checkbox" name="starred" [(ngModel)]="starred" id="starred" />
   </div>
   <input type="submit" value="Add Note" class="btn" />
 </form>

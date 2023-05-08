@@ -29,4 +29,8 @@ export class NoteService {
     const url = `${this.apiUrl}/${note.id}`;
     return this.http.put<Note>(url, note, httpOptions);
   }
+
+  addNote(note: Note): Observable<Note> {
+    return this.http.post<Note>(this.apiUrl, note, httpOptions);
+  }
 }

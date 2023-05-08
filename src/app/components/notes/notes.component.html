@@ -1,6 +1,6 @@
 <div class="content" role="main">
   <p>Previous 7 Days</p>
-  <app-add-note></app-add-note>
+  <app-add-note (onAddNote)="addNote($event)"></app-add-note>
   <app-note-item
     *ngFor="let note of notes"
     [note]="note"

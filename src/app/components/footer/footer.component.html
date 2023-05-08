@@ -4,9 +4,13 @@
     <p>Version 1.0.0</p>
   </div>
 
-  <button class="btn-footer">add</button>
-
-  <app-button text="Add" color="red" (btnClick)="toggleAddNote()"></app-button>
+  <app-button
+    *ngIf="hasRoute('/')"
+    text="{{ showAddNote ? 'close' : 'Add' }}"
+    color="{{ showAddNote ? 'black' : 'blue' }}"
+    (btnClick)="toggleAddNote()"
+    class="btn-footer"
+  ></app-button>
 
   <!--Links-->
   <div class="footer-right">
