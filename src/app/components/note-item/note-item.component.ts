@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Note } from 'src/app/Note';
+import { Note } from '../../Note';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
@@ -10,14 +10,9 @@ import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 export class NoteItemComponent {
   @Input() note!: Note;
   @Output() onDeleteNote: EventEmitter<Note> = new EventEmitter();
-  @Output() onToggleStar: EventEmitter<Note> = new EventEmitter();
   faTrashCan = faTrashCan;
 
   onDelete(note: any) {
     this.onDeleteNote.emit(note);
-  }
-
-  onToggle(note: any) {
-    this.onToggleStar.emit(note);
   }
 }

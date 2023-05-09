@@ -1,13 +1,12 @@
 <div class="note">
-  <h3 (starred)="onToggle(note)">
+  <h3>
     {{ note.title
     }}<fa-icon
       [icon]="faTrashCan"
       [ngStyle
       ]="{'color':'red'}"
-      (click)="(onDelete)"
+      (click)="onDelete(note)"
     ></fa-icon>
   </h3>
-
   <p>{{ note.text }}</p>
 </div>

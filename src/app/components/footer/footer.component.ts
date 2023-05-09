@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  showAddNote: boolean = true;
+  showAddNote: boolean = false;
   subscription!: Subscription;
 
   constructor(private uiService: UiService, private router: Router) {
@@ -18,8 +18,12 @@ export class FooterComponent {
       .subscribe((value) => (this.showAddNote = value));
   }
 
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+
   toggleAddNote() {
-    this.uiService.toggleAddNote;
+    this.uiService.toggleAddNote();
   }
 
   hasRoute(route: string) {

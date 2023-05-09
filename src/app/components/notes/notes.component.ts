@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NoteService } from '../../services/note.service';
-import { Note } from 'src/app/Note';
+import { Note } from '../../Note';
 
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.scss'],
 })
-export class NotesComponent {
+export class NotesComponent implements OnInit {
   notes: Note[] = [];
 
   constructor(private noteService: NoteService) {}
@@ -20,13 +20,8 @@ export class NotesComponent {
     this.noteService
       .deleteNote(note)
       .subscribe(
-        () => (this.notes = this.notes.filter((n) => n.id !== note.id))
+        () => (this.notes = this.notes.filter((i) => i.id !== note.id))
       );
-  }
-
-  toggleStar(note: Note) {
-    note.starred = !note.starred;
-    this.noteService.addStar(note).subscribe();
   }
 
   addNote(note: Note) {

@@ -14,6 +14,7 @@ const httpOptions = {
 })
 export class NoteService {
   private apiUrl = 'http://localhost:3000/notes';
+
   constructor(private http: HttpClient) {}
 
   getNotes(): Observable<Note[]> {
@@ -23,11 +24,6 @@ export class NoteService {
   deleteNote(note: Note): Observable<Note> {
     const url = `${this.apiUrl}/${note.id}`;
     return this.http.delete<Note>(url);
-  }
-
-  addStar(note: Note): Observable<Note> {
-    const url = `${this.apiUrl}/${note.id}`;
-    return this.http.put<Note>(url, note, httpOptions);
   }
 
   addNote(note: Note): Observable<Note> {

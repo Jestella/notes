@@ -12,7 +12,6 @@ export class AddNoteComponent {
   @Output() onAddNote: EventEmitter<Note> = new EventEmitter();
   title!: string;
   text!: string;
-  starred!: boolean;
   showAddNote!: boolean;
   subscription!: Subscription;
 
@@ -31,13 +30,11 @@ export class AddNoteComponent {
     const newNote = {
       title: this.title,
       text: this.text,
-      starred: this.starred,
     };
 
     this.onAddNote.emit(newNote);
 
     this.title = '';
     this.text = '';
-    this.starred = false;
   }
 }
